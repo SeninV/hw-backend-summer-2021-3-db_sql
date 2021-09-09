@@ -2,6 +2,7 @@
 # Вывести топ 5 самых коротких по длительности перелетов
 # В ответе должно быть 2 колонки [flight_no, duration]
 TASK_1_QUERY = """
+select flight_no,  scheduled_arrival - scheduled_departure as duration FROM flights order by duration asc limit 5
 """
 #  flight_no | duration 
 # -----------+----------
@@ -17,6 +18,7 @@ TASK_1_QUERY = """
 # количество упоминаний которых меньше 50
 # В ответе должно быть 2 колонки [flight_no, count]
 TASK_2_QUERY = """
+select flight_no, COUNT(1) as count from flights group by flight_no having count(1) < 50 order by count(1) desc limit 3
 """
 #  flight_no | count 
 # -----------+-------

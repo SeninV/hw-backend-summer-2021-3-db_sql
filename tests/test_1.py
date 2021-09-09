@@ -5,10 +5,12 @@ from typing import Optional
 import gino
 from sqlalchemy.engine.url import URL
 import pytest
-from sql_querys import TASK_1_QUERY, TASK_2_QUERY, TASK_3_QUERY
+
 import asyncio
 import yaml
 import datetime
+
+from sql_querys import TASK_1_QUERY, TASK_2_QUERY, TASK_3_QUERY
 
 
 @dataclass
